@@ -16,14 +16,14 @@ function Home() {
                             <div className='rounded text-white 
                                             border-white border-solid border-2 py-2 px-4'
                                 >
-                                Novo Pedido
+                                Novo Produto
                             </div>
                         </div>
                     </div>
 
                     <div className="flex justify-center ">
                         <img
-                            src="https://i.imgur.com/fyfri1v.png"
+                            src="./farmacia.png"
                             alt="Imagem Página Home"
                             className='w-2/3'
                         />
