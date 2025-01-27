@@ -1,4 +1,4 @@
-import { ChangeEvent, useContext, useEffect, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import { RotatingLines } from "react-loader-spinner";
 import { useNavigate, useParams } from "react-router-dom";
 
@@ -53,17 +53,14 @@ function FormCategoria() {
                 await atualizar(`/categorias`, categoria, setCategoria)
                 alert('A categoria foi atualizado com sucesso!')
             } catch (error: any) {
-                    alert('Erro ao atualizar a categoria.')
-                
-                }
+                    alert('Erro ao atualizar a categoria.') 
+            }
         } else {
             try {
                 await cadastrar(`/categorias`, categoria, setCategoria, )
-                alert('A categoria foi cadastrado com sucesso!')
+                alert('A categoria foi cadastrada com sucesso!')
             } catch (error: any) {
-                    alert('Erro ao cadastrar a categoria.')
-
-
+                alert('Erro ao cadastrar a categoria.')
             }
         }
 
@@ -79,7 +76,7 @@ function FormCategoria() {
 
             <form className="w-1/2 flex flex-col gap-4" onSubmit={gerarNovoCategoria}>
                 <div className="flex flex-col gap-2">
-                    <label htmlFor="descricao">Descrição da categoria</label>
+                    <label htmlFor="descricao">Nome da categoria</label>
                     <input
                         type="text"
                         placeholder="Descreva aqui seu categoria"
